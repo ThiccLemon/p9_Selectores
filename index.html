@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectores</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+       $(document).ready(function() {
+
+           $(".1").show();
+           $(".1").click(function(){
+                $(".1").hide();
+                new Audio('snd/open.mp3').play()
+           }); 
+
+           $(".2").hide();
+           $(".1").click(function(){
+                $(".2").show();
+                
+           }); 
+
+           $(".2").hide();
+           $(".2").click(function(){
+                $(".1").show();
+                $(".2").hide();
+                new Audio('snd/close.mp3').play()
+
+           }); 
+           
+        });
+            
+        
+    </script>
+</head>
+<body>
+
+    <img class="1" src="img/11.jpg" alt="">
+    <img class="2" src="img/22.jpg" alt="">
+
+    
+</body>
+</html>
